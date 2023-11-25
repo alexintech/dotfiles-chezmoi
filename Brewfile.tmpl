@@ -1,0 +1,164 @@
+tap "homebrew/cask-fonts"
+tap "buo/cask-upgrade"
+brew "mas"
+brew "git"
+brew "vim"
+brew "zsh"
+brew "jq"
+brew "fzf"
+brew "tmux"
+brew "go"
+brew "yt-dlp"
+brew "hugo"
+brew "bat"
+brew "wget"
+brew "helm"
+brew "dive"
+brew "asdf" # to install kubectl, java and nodejs versions
+brew "tree"
+brew "chezmoi"
+brew "tldr"
+brew "telnet"
+brew "curl"
+brew "gpg"
+
+
+{{ if ne .chezmoi.hostname "Alexandrs-MacBook-Pro" -}}
+# Evaluation
+
+# Appium dependencies
+brew "carthage"
+
+brew "gitlab-ci-local"
+brew "asciidoctor"
+brew "gitleaks"
+# brew "git-secrets"
+brew "detect-secrets"
+brew "glab"
+brew "pyenv"
+brew "bfg"
+brew "coreutils"
+brew "ncdu"
+brew "krew"
+brew "kubectx"
+brew "httpie"
+brew "git-filter-repo"
+brew "helmfile"
+
+# tap "sourcegraph/src-cli"
+# brew "src-cli" # Sourcegraph cli
+brew "minio-mc"
+brew "postgresql@14"
+brew "bats-core"
+brew "yq"
+# brew "podman"
+# brew "docker"
+brew "colima"
+# brew "docker-compose"
+# brew "docker-buildx"
+
+brew "hadolint"
+tap "goodwithtech/r"
+brew "dockle"
+brew "sops"
+brew "age"
+brew "shellcheck"
+brew "pint"
+brew "pyenv-virtualenv"
+brew "vale"
+brew "go-jsonnet"
+brew "jsonnet-bundler"
+brew "mednafen"
+brew "mame"
+brew "kind"
+
+brew "cairo"  # kd/warehouse
+brew "pango"  # kd/warehouse
+
+brew "sonobuoy" # https://sonobuoy.io diagnostic tool for Kubernetes
+
+# Grafana gdg
+tap "esnet/gdg"
+brew "esnet/gdg/gdg"
+{{ end -}}
+
+
+cask "1password"
+cask "1password-cli"    # used for glab cli tool
+cask "adguard"
+cask "cloudflare-warp"
+cask "docker"
+cask "font-iosevka-nerd-font"
+cask "firefox"
+cask "goland"
+cask "google-chrome"
+cask "imageoptim"       # minimize image size
+cask "intellij-idea"
+cask "iterm2"
+cask "macupdater"
+cask "macvim"
+cask "microsoft-auto-update"
+cask "microsoft-excel"
+cask "microsoft-powerpoint"
+cask "microsoft-word"
+cask "nrlquaker-winbox"
+cask "plex"
+cask "postman"
+cask "pycharm"
+cask "shottr"
+cask "teamviewer"
+cask "transmission"
+cask "xld"
+# QuickLook plugins
+# https://github.com/sbarex/SourceCodeSyntaxHighlight
+cask "syntax-highlight", args: { no_quarantine: true }
+# https://github.com/sbarex/QLMarkdown
+cask "qlmarkdown", args: { no_quarantine: true }
+
+# Evaluation
+cask "visual-studio-code" # Used for editing jsonnet
+
+{{ if ne .chezmoi.hostname "Alexandrs-MacBook-Pro" -}}
+cask "lens"
+cask "obs"
+cask "retroarch-metal"  # Retrogames emulation
+cask "anaconda"         # Python education using Jupyter
+# cask "android-studio"   # Used only for UI mobile tests
+cask "anki"             # Flashcards (not decided yet about usefulness)
+cask "appium-inspector" # Used only for UI mobile tests
+cask "gitdock"          # App for Gitlab in menu tray
+cask "ngrok"            # Used to expose local service to internet
+cask "notion"           # Used by frontenders
+cask "ukelele"          # Keyboard remappings
+cask "wireshark"        # Used once to analize tcpdump
+# cask "podman-desktop"   # Docker desktop alternative
+# cask "powerpanel"       # CyberPower UPS software
+{{ end -}}
+
+# Safari extensions
+mas "1Password for Safari", id: 1569813296
+mas "Evernote Web Clipper", id: 1481669779
+
+mas "Be Focused Pro: Pomodoro Timer", id: 961632517
+mas "Day One", id: 1055511498
+mas "Evernote", id: 406056744
+mas "Keynote", id: 409183694
+mas "Movist", id: 461788075
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "ReadKit", id: 588726889
+mas "Telegram", id: 747648890
+
+{{ if ne .chezmoi.hostname "Alexandrs-MacBook-Pro" -}}
+mas "Monosnap - screenshot editor", id: 540348655
+mas "ScreenPointer", id: 1368204906
+
+# Evaluation
+mas "AnkiApp Flashcards", id: 689185915
+mas "Highlights: PDF Reader & Notes", id: 1498912833
+mas "Pure Paste", id: 1611378436
+mas "Slack for Desktop", id: 803453959  # Used only for oncall chat
+mas "Tailscale", id: 1475387142         # home vpn
+mas "Xcode", id: 497799835              # used once for UI mobile tests
+{{ end -}}
+
