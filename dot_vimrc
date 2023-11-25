@@ -11,6 +11,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Plugin 'ericbn/vim-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " Plugin 'airblade/vim-gitgutter'
@@ -154,7 +155,8 @@ let mapleader = "\<Space>"
 
 " Theme
 set background=light
-colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night
+colorscheme solarized
 
 " CtrlP
 map <leader>t <C-p>
@@ -246,6 +248,12 @@ let g:UltiSnipsEditSplit="vertical"
 " e.g.
 " to map something in just NORMAL mode use :nmap or :nnoremap
 " to map something in just VISUAL mode use :vmap or :vnoremap
+
+
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+" set keymap=russian-jcukenwin
+" set iminsert=0
+" set imsearch=0
 
 " Clear search buffer
 :nnoremap § :nohlsearch<cr>
