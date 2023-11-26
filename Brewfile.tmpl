@@ -18,12 +18,13 @@ brew "asdf" # to install kubectl, java and nodejs versions
 brew "tree"
 brew "chezmoi"
 brew "tldr"
-brew "telnet"
 brew "curl"
 brew "gpg"
 
 
 {{ if ne .chezmoi.hostname "Alexandrs-MacBook-Pro" -}}
+brew "telnet"
+
 # Evaluation
 
 # Appium dependencies
