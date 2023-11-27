@@ -111,8 +111,6 @@ cask "teamviewer"
 cask "transmission"
 cask "xld"
 # QuickLook plugins
-# https://github.com/sbarex/SourceCodeSyntaxHighlight
-cask "syntax-highlight", args: { no_quarantine: true }
 # https://github.com/sbarex/QLMarkdown
 cask "qlmarkdown", args: { no_quarantine: true }
 
@@ -120,6 +118,9 @@ cask "qlmarkdown", args: { no_quarantine: true }
 cask "visual-studio-code" # Used for editing jsonnet
 
 {{ if ne .chezmoi.hostname "Alexandrs-MacBook-Pro" -}}
+# https://github.com/sbarex/SourceCodeSyntaxHighlight
+cask "syntax-highlight", args: { no_quarantine: true }
+
 cask "lens"
 cask "obs"
 cask "retroarch-metal"  # Retrogames emulation
