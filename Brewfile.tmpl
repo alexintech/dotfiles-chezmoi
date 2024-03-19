@@ -24,27 +24,27 @@ brew "gpg"
 
 {{ if ne .chezmoi.hostname "Alexandrs-MacBook-Pro" -}}
 brew "telnet"
+brew "glab"
+brew "kubectx"
+brew "helmfile"
 
 # Evaluation
 
 # Appium dependencies
-brew "carthage"
+# brew "carthage"
 
 brew "gitlab-ci-local"
 brew "asciidoctor"
 brew "gitleaks"
 # brew "git-secrets"
 brew "detect-secrets"
-brew "glab"
 brew "pyenv"
 brew "bfg"
 brew "coreutils"
 brew "ncdu"
 brew "krew"
-brew "kubectx"
 brew "httpie"
 brew "git-filter-repo"
-brew "helmfile"
 
 # tap "sourcegraph/src-cli"
 # brew "src-cli" # Sourcegraph cli
@@ -72,11 +72,15 @@ brew "jsonnet-bundler"
 brew "mednafen"
 brew "mame"
 brew "kind"
+brew "opa"
 
 brew "cairo"  # kd/warehouse
 brew "pango"  # kd/warehouse
 
 brew "sonobuoy" # https://sonobuoy.io diagnostic tool for Kubernetes
+
+brew "tilt"     # https://tilt.dev
+brew "ctlptl"   # Creating k8s cluster for Tilt declaratively
 
 # Grafana gdg
 tap "esnet/gdg"
@@ -138,6 +142,11 @@ cask "wireshark"        # Used once to analize tcpdump
 # cask "podman-desktop"   # Docker desktop alternative
 # cask "powerpanel"       # CyberPower UPS software
 cask "clickup"          # ClickUp
+
+# For Ansible learning
+cask "vmware-fusion"
+cask "vagrant"
+cask "vagrant-vmware-utility"
 {{ end -}}
 
 # Safari extensions
@@ -154,6 +163,7 @@ mas "Pages", id: 409201541
 mas "ReadKit", id: 588726889
 mas "Telegram", id: 747648890
 mas "Things 3", id: 904280696
+mas "Amphetamine", id: 937984704        # no sleep utility for mac
 
 {{ if ne .chezmoi.hostname "Alexandrs-MacBook-Pro" -}}
 mas "Monosnap - screenshot editor", id: 540348655
@@ -166,5 +176,7 @@ mas "Pure Paste", id: 1611378436
 mas "Slack for Desktop", id: 803453959  # Used only for oncall chat
 mas "Tailscale", id: 1475387142         # home vpn
 mas "Xcode", id: 497799835              # used once for UI mobile tests
+mas "Bitwarden", id: 1352778147         # password manager
+mas "DaVinci Resolve", id: 571213070
 {{ end -}}
 
