@@ -143,8 +143,8 @@ let g:netrw_liststyle=3
 
 " Always highlight column 80 so it's easier to see where
 " cutoff appears on longer screens
-autocmd BufWinEnter * highlight ColorColumn ctermbg=darkred
-set colorcolumn=80
+autocmd BufWinEnter * highlight ColorColumn ctermbg=lightgray
+set colorcolumn=120
 
 let mapleader = "\<Space>"
 " }}}

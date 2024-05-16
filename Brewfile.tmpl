@@ -46,8 +46,8 @@ brew "krew"
 brew "httpie"
 brew "git-filter-repo"
 
-# tap "sourcegraph/src-cli"
-# brew "src-cli" # Sourcegraph cli
+tap "sourcegraph/src-cli"
+brew "src-cli" # Sourcegraph cli
 brew "minio-mc"
 brew "postgresql@14"
 brew "bats-core"
@@ -85,6 +85,8 @@ brew "ctlptl"   # Creating k8s cluster for Tilt declaratively
 # Grafana gdg
 tap "esnet/gdg"
 brew "esnet/gdg/gdg"
+
+brew "comby"
 {{ end -}}
 
 
@@ -123,6 +125,8 @@ cask "qlmarkdown", args: { no_quarantine: true }
 
 # Evaluation
 cask "visual-studio-code" # Used for editing jsonnet
+cask "devtoys"  # UI utility for developers
+cask "bruno"    # Postman alternative
 
 {{ if ne .chezmoi.hostname "Alexandrs-MacBook-Pro" -}}
 # https://github.com/sbarex/SourceCodeSyntaxHighlight
