@@ -1,8 +1,8 @@
-tap "homebrew/cask-fonts"
 tap "buo/cask-upgrade"
 brew "mas"
 brew "git"
 brew "vim"
+brew "bash"
 brew "zsh"
 brew "jq"
 brew "fzf"
@@ -45,6 +45,11 @@ brew "ncdu"
 brew "krew"
 brew "httpie"
 brew "git-filter-repo"
+brew "kubent"
+tap "infrahq/tap"
+brew "infrahq/tap/infra"
+brew "mongosh"
+brew "rclone"
 
 tap "sourcegraph/src-cli"
 brew "src-cli" # Sourcegraph cli
@@ -70,8 +75,9 @@ brew "vale"
 brew "go-jsonnet"
 brew "jsonnet-bundler"
 brew "mednafen"
-brew "mame"
+# brew "mame"
 brew "kind"
+brew "cloud-provider-kind"
 brew "opa"
 
 brew "cairo"  # kd/warehouse
@@ -87,6 +93,15 @@ tap "esnet/gdg"
 brew "esnet/gdg/gdg"
 
 brew "comby"
+#brew "skopeo"   # Utility for cloning Docker images
+brew "argocd"   # ArgoCD CLI
+brew "gcc"      # GCC compiler
+
+brew "k9s"
+brew "mise"     # asdf analog
+brew "mit-scheme"  # Lisp dialect for SICP learning course
+brew "pre-commit"
+brew "ffmpeg"  # used for yt-dlp
 {{ end -}}
 
 
@@ -95,6 +110,7 @@ cask "1password-cli"    # used for glab cli tool
 cask "adguard"
 cask "adguard-vpn"
 cask "bettertouchtool"
+cask "chatgpt"
 cask "cloudflare-warp"
 cask "docker"
 cask "font-iosevka-nerd-font"
@@ -128,6 +144,14 @@ cask "visual-studio-code" # Used for editing jsonnet
 cask "devtoys"  # UI utility for developers
 cask "bruno"    # Postman alternative
 cask "rustrover"          # JetBrains IDE for Rust
+cask "utm"      # Running virtual machines
+cask "clion"    # JetBrains IDE for C/C++
+cask "mongodb-compass"  # MongoDB GUI
+cask "mockoon"  # Mocking tool
+cask "zed"      # Text editor in Rust
+cask "camunda-modeler"
+cask "ollama"   # Start Ollama server
+cask "ollamac"  # Mac GUI for Ollama
 
 {{ if ne .chezmoi.hostname "Alexandrs-MacBook-Pro" -}}
 # https://github.com/sbarex/SourceCodeSyntaxHighlight
@@ -135,7 +159,7 @@ cask "syntax-highlight", args: { no_quarantine: true }
 
 cask "lens"
 cask "obs"
-cask "retroarch-metal"  # Retrogames emulation
+# cask "retroarch-metal"  # Retrogames emulation
 # cask "anaconda"         # Python education using Jupyter
 # cask "android-studio"   # Used only for UI mobile tests
 # cask "anki"             # Flashcards (not decided yet about usefulness)
@@ -144,7 +168,7 @@ cask "gitdock"          # App for Gitlab in menu tray
 cask "ngrok"            # Used to expose local service to internet
 # cask "notion"           # Used by frontenders
 cask "ukelele"          # Keyboard remappings
-cask "wireshark"        # Used once to analize tcpdump
+# cask "wireshark"        # Used once to analize tcpdump
 # cask "podman-desktop"   # Docker desktop alternative
 # cask "powerpanel"       # CyberPower UPS software
 cask "clickup"          # ClickUp
